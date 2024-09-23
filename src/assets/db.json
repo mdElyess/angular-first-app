@@ -1,0 +1,28 @@
+{
+  "members": [
+    {
+      "id": "1234",
+      "cin": "124587",
+      "name": "John",
+      "cv": "cv.pdf",
+      "type": "Teacher",
+      "createdDate": "12-12-2024"
+    },
+    {
+      "id": "1235",
+      "cin": "124588",
+      "name": "Anup",
+      "cv": "cv.pdf",
+      "type": "Teacher",
+      "createdDate": "12-13-2024"
+    },
+    {
+      "id": "1236",
+      "cin": "124589",
+      "name": "Morphy",
+      "cv": "cv.pdf",
+      "type": "Teacher",
+      "createdDate": "12-14-2024"
+    }
+  ]
+}
