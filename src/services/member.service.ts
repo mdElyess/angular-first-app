@@ -15,4 +15,9 @@ export class MemberService {
   getMembers(): Observable<Member[]> {
     return this.http.get<Member[]>(this.url + 'members');
   }
+
+  // send Post method to backend
+  createMember(member: Member): Observable<void> {
+    return this.http.post<void>(this.url + 'members', member);
+  }
 }

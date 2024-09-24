@@ -16,7 +16,6 @@ export class MemberComponent implements OnInit {
     this._memberService.getMembers().subscribe(
       (res) => {
         this.dataSource = res;
-        console.log(res);
       },
       (err) => {
         console.log(err);
@@ -24,14 +23,20 @@ export class MemberComponent implements OnInit {
     );
   }
 
-  delete(e: Member) {}
+  delete(e: Member) {
+    console.log('deleted');
+  }
+  update(e: Member) {
+    console.log('updated');
+  }
 
   displayedColumns: string[] = [
-    'id',
-    'cin',
-    'name',
-    'createDate',
-    'cv',
-    'type',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7'
   ];
 }
