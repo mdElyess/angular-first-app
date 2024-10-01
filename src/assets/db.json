@@ -1,20 +1,12 @@
 {
   "members": [
     {
-      "id": "1235",
-      "cin": "124588",
-      "name": "Anup",
-      "cv": "cv.pdf",
-      "type": "Teacher",
-      "createdDate": "12-13-2024"
-    },
-    {
-      "id": "1236",
-      "cin": "124589",
-      "name": "Morphy",
-      "cv": "cv.pdf",
-      "type": "Teacher",
-      "createdDate": "12-14-2024"
+      "id": "d4af",
+      "cin": "123546",
+      "name": "asdfqwer",
+      "cv": "asdfqwer",
+      "type": "asdf",
+      "createdDate": "2024-10-01T08:52:08.393Z"
     }
   ]
 }

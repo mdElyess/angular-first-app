@@ -7,7 +7,8 @@ import { MemberFormComponent } from './components/member-form/member-form.compon
 const routes: Routes = [
   {path: '', component: MemberComponent, pathMatch: 'full'},
   {path: 'create', component: MemberFormComponent, pathMatch: 'full'},
-  {path: '**', component: MemberComponent}
+  {path: ':id/edit', component: MemberFormComponent, pathMatch: 'full'},
+  {path: '**', component: MemberComponent},
 ];
 
 @NgModule({

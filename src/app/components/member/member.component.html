@@ -54,7 +54,7 @@
   <ng-container matColumnDef="7">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let element">
-      <button (click)="update(element.id)"><mat-icon>edit</mat-icon></button>
+      <button routerLink="/{{element.id}}/edit"><mat-icon>edit</mat-icon></button>
       <button (click)="delete(element.id)"><mat-icon>delete</mat-icon></button>
     </td>
   </ng-container>

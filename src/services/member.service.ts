@@ -16,16 +16,20 @@ export class MemberService {
     return this.http.get<Member[]>(this.url + 'members');
   }
 
+  getMemberById(id: string) {
+    return this.http.get<Member>(this.url + `members/${id}`);
+  }
+
   // send Post method to backend
   createMember(member: Member): Observable<void> {
     return this.http.post<void>(this.url + 'members', member);
   }
 
-  updateMember(member: Member, id: string) {
-    return this.http.put(this.url + `members/${id}`,member);
+  updateMember(member: Member, id: string): Observable<void> {
+    return this.http.put<void>(this.url + `members/${id}`,member);
   }
 
-  deleteMember(id: string) {
-    return this.http.delete(this.url + `members/${id}`);
+  deleteMember(id: string): Observable<void> {
+    return this.http.delete<void>(this.url + `members/${id}`);
   }
 }
