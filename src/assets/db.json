@@ -1,12 +1,20 @@
 {
   "members": [
     {
-      "id": "d4af",
-      "cin": "123546",
-      "name": "asdfqwer",
-      "cv": "asdfqwer",
-      "type": "asdf",
-      "createdDate": "2024-10-01T08:52:08.393Z"
+      "cin": "125463",
+      "name": "first",
+      "cv": "cv.pdf",
+      "type": "student",
+      "createdDate": "2024-10-01T23:09:55.951Z",
+      "id": "d4af"
+    },
+    {
+      "id": "a898",
+      "cin": "123321",
+      "name": "qwerasdf",
+      "cv": "fdasqwer",
+      "type": "qwerfdas",
+      "createdDate": "2024-10-01T23:19:21.774Z"
     }
   ]
 }

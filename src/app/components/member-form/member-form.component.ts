@@ -20,14 +20,15 @@ export class MemberFormComponent implements OnInit {
 
   ngOnInit() {
     const idcourant = this.activatedRoute.snapshot.params['id'];
-    if (!!idcourant) {      
+
+    if (!!idcourant) {
       this._memberService.getMemberById(idcourant).subscribe(
-        (res) => {
+        (resp) => {
           this.form = new FormGroup({
-            cin: new FormControl(res.cin, [Validators.required]),
-            name: new FormControl(res.name, [Validators.required]),
-            cv: new FormControl(res.cv, [Validators.required]),
-            type: new FormControl(res.type, [Validators.required]),
+            cin: new FormControl(resp.cin, [Validators.required]),
+            name: new FormControl(resp.name, [Validators.required]),
+            cv: new FormControl(resp.cv, [Validators.required]),
+            type: new FormControl(resp.type, [Validators.required]),
           });
         },
         (err) => {

@@ -18,7 +18,7 @@ export class MemberComponent implements OnInit {
   dataSource: Member[] = [];
 
   ngOnInit(): void {
-    this.fetchData()
+    this.fetchData();
   }
 
   delete(id: string): void {
@@ -26,11 +26,11 @@ export class MemberComponent implements OnInit {
       height: '200px',
       width: '300px',
     });
-    dialog.afterClosed().subscribe(result => {
+    dialog.afterClosed().subscribe((result) => {
       if (result) {
         this._memberService.deleteMember(id).subscribe(
           () => {
-            this.fetchData
+            this.fetchData();
           },
           (err) => {
             console.log(err);
@@ -38,7 +38,6 @@ export class MemberComponent implements OnInit {
         );
       }
     });
-    
   }
 
   fetchData() {
@@ -50,10 +49,6 @@ export class MemberComponent implements OnInit {
         console.log(err);
       }
     );
-  }
-
-  update(e: Member) {
-    console.log('updated');
   }
 
   displayedColumns: string[] = ['1', '2', '3', '4', '5', '6', '7'];
