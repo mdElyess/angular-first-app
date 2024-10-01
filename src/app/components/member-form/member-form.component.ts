@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Member } from 'src/models/Member';
 import { MemberService } from 'src/services/member.service';
 
@@ -12,7 +12,7 @@ import { MemberService } from 'src/services/member.service';
 export class MemberFormComponent implements OnInit {
   form!: FormGroup;
 
-  constructor(private _memberService: MemberService, private _router: Router) {}
+  constructor(private _memberService: MemberService, private _router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -24,15 +24,21 @@ export class MemberFormComponent implements OnInit {
   }
 
   submitData(): void {
-    console.log(this.form.value);
-    const member: Member = { ...this.form.value, createdDate: new Date() };
-    this._memberService.createMember(member).subscribe(
-      () => {
-        this._router.navigate(['']);
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
+    const idcourant = this.activatedRoute.snapshot.params['id'];
+    if (!!idcourant) {
+      const m: Member= {... this.form.value, createdDate: new Date()}
+      this._memberService.updateMember(m, idcourant);
+      // this._router.navigate(['']);
+    } else {
+      const member: Member = { ...this.form.value, createdDate: new Date() };
+      this._memberService.createMember(member).subscribe(
+        () => {
+          this._router.navigate(['']);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    }
   }
 }

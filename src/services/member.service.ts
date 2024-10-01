@@ -20,4 +20,12 @@ export class MemberService {
   createMember(member: Member): Observable<void> {
     return this.http.post<void>(this.url + 'members', member);
   }
+
+  updateMember(member: Member, id: string) {
+    return this.http.put(this.url + `members/${id}`,member);
+  }
+
+  deleteMember(id: string) {
+    return this.http.delete(this.url + `members/${id}`);
+  }
 }

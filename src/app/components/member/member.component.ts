@@ -23,8 +23,15 @@ export class MemberComponent implements OnInit {
     );
   }
 
-  delete(e: Member) {
-    console.log('deleted');
+  delete(id: string): void {
+    this._memberService.deleteMember(id).subscribe(
+      res => {
+        this.ngOnInit();
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
   update(e: Member) {
     console.log('updated');

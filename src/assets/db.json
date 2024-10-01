@@ -1,14 +1,6 @@
 {
   "members": [
     {
-      "id": "1234",
-      "cin": "124587",
-      "name": "John",
-      "cv": "cv.pdf",
-      "type": "Teacher",
-      "createdDate": "12-12-2024"
-    },
-    {
       "id": "1235",
       "cin": "124588",
       "name": "Anup",
@@ -23,38 +15,6 @@
       "cv": "cv.pdf",
       "type": "Teacher",
       "createdDate": "12-14-2024"
-    },
-    {
-      "id": "d0f3",
-      "cin": null,
-      "name": null,
-      "cv": null,
-      "type": null,
-      "createdDate": "2024-09-24T08:39:04.637Z"
-    },
-    {
-      "id": "023c",
-      "cin": null,
-      "name": null,
-      "cv": null,
-      "type": null,
-      "createdDate": "2024-09-24T08:39:47.588Z"
-    },
-    {
-      "id": "f87a",
-      "cin": "12346",
-      "name": "first member",
-      "cv": "cv",
-      "type": "student",
-      "createdDate": "2024-09-24T08:40:41.447Z"
-    },
-    {
-      "id": "9184",
-      "cin": "132654",
-      "name": "second",
-      "cv": "cv",
-      "type": "student",
-      "createdDate": "2024-09-24T08:41:35.640Z"
     }
   ]
 }
